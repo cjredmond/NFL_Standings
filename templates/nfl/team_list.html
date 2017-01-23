@@ -1,13 +1,156 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" media="screen" title="no title">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/theme.css' %}" />
     <title></title>
   </head>
   <body>
-    <h1>Team List</h1>
+    <div class="container">
+      <h1>Team List</h1>
+      <div class="row">
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-3 grey-border">AFC East</div>
+          <div class="col-md-1 grey-border">W</div>
+          <div class="col-md-1 grey-border">L</div>
+          <div class="col-md-1 grey-border">T</div>
+        </div>
     {% for team in object_list %}
-    {{ team }}
-    {% endfor %}
+    {% if team.div == 'AFC East' %}
+    <div class="row">
+      <div class="col-md-3">{{ team }}</div>
+      <div class="col-md-1">{{ team.wins }}</div>
+      <div class="col-md-1">{{ team.losses }}</div>
+      <div class="col-md-1">{{ team.ties }}</div>
+    </div>
+    {% endif %}
+    {% endfor %}<br>
+    <div class="row">
+      <div class="col-md-3 grey-border">AFC North</div>
+      <div class="col-md-1 grey-border">W</div>
+      <div class="col-md-1 grey-border">L</div>
+      <div class="col-md-1 grey-border">T</div>
+    </div>
+
+    {% for team in object_list %}
+    {% if team.div == 'AFC North' %}
+    <div class="row">
+      <div class="col-md-3">{{ team }}</div>
+      <div class="col-md-1">{{ team.wins }}</div>
+      <div class="col-md-1">{{ team.losses }}</div>
+      <div class="col-md-1">{{ team.ties }}</div>
+    </div>
+    {% endif %}
+    {% endfor %}<br>
+
+    <div class="row">
+      <div class="col-md-3 grey-border">AFC South</div>
+      <div class="col-md-1 grey-border">W</div>
+      <div class="col-md-1 grey-border">L</div>
+      <div class="col-md-1 grey-border">T</div>
+    </div>
+    {% for team in object_list %}
+    {% if team.div == 'AFC South' %}
+    <div class="row">
+      <div class="col-md-3">{{ team }}</div>
+      <div class="col-md-1">{{ team.wins }}</div>
+      <div class="col-md-1">{{ team.losses }}</div>
+      <div class="col-md-1">{{ team.ties }}</div>
+    </div>
+    {% endif %}
+    {% endfor %}<br>
+
+    <div class="row">
+      <div class="col-md-3 grey-border">AFC West</div>
+      <div class="col-md-1 grey-border">W</div>
+      <div class="col-md-1 grey-border">L</div>
+      <div class="col-md-1 grey-border">T</div>
+    </div>
+    {% for team in object_list %}
+    {% if team.div == 'AFC West' %}
+    <div class="row">
+      <div class="col-md-3">{{ team }}</div>
+      <div class="col-md-1">{{ team.wins }}</div>
+      <div class="col-md-1">{{ team.losses }}</div>
+      <div class="col-md-1">{{ team.ties }}</div>
+    </div>
+    {% endif %}
+    {% endfor %}<br>
+      </div>
+
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-3 grey-border">NFC East</div>
+          <div class="col-md-1 grey-border">W</div>
+          <div class="col-md-1 grey-border">L</div>
+          <div class="col-md-1 grey-border">T</div>
+        </div>
+    {% for team in object_list %}
+    {% if team.div == 'NFC East' %}
+    <div class="row">
+      <div class="col-md-3">{{ team }}</div>
+      <div class="col-md-1">{{ team.wins }}</div>
+      <div class="col-md-1">{{ team.losses }}</div>
+      <div class="col-md-1">{{ team.ties }}</div>
+    </div>
+    {% endif %}
+    {% endfor %}<br>
+
+    <div class="row">
+      <div class="col-md-3 grey-border">NFC North</div>
+      <div class="col-md-1 grey-border">W</div>
+      <div class="col-md-1 grey-border">L</div>
+      <div class="col-md-1 grey-border">T</div>
+    </div>
+    {% for team in object_list %}
+    {% if team.div == 'NFC North' %}
+    <div class="row">
+      <div class="col-md-3">{{ team }}</div>
+      <div class="col-md-1">{{ team.wins }}</div>
+      <div class="col-md-1">{{ team.losses }}</div>
+      <div class="col-md-1">{{ team.ties }}</div>
+    </div>
+    {% endif %}
+    {% endfor %}<br>
+
+    <div class="row">
+      <div class="col-md-3 grey-border">NFC South</div>
+      <div class="col-md-1 grey-border">W</div>
+      <div class="col-md-1 grey-border">L</div>
+      <div class="col-md-1 grey-border">T</div>
+    </div>
+    {% for team in object_list %}
+    {% if team.div == 'NFC South' %}
+    <div class="row">
+      <div class="col-md-3">{{ team }}</div>
+      <div class="col-md-1">{{ team.wins }}</div>
+      <div class="col-md-1">{{ team.losses }}</div>
+      <div class="col-md-1">{{ team.ties }}</div>
+    </div>
+    {% endif %}
+    {% endfor %}<br>
+
+    <div class="row">
+      <div class="col-md-3 grey-border">NFC West</div>
+      <div class="col-md-1 grey-border">W</div>
+      <div class="col-md-1 grey-border">L</div>
+      <div class="col-md-1 grey-border">T</div>
+    </div>
+    {% for team in object_list %}
+    {% if team.div == 'NFC West' %}
+    <div class="row">
+      <div class="col-md-3">{{ team }}</div>
+      <div class="col-md-1">{{ team.wins }}</div>
+      <div class="col-md-1">{{ team.losses }}</div>
+      <div class="col-md-1">{{ team.ties }}</div>
+    </div>
+    {% endif %}
+    {% endfor %}<br>
+    </div>
+    </div>
+    </div>
   </body>
 </html>
